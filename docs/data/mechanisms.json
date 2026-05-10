@@ -1,0 +1,90 @@
+{
+  "plot1_glutamate_time": {
+    "title": "Extracellular Glutamate During Acute Stress",
+    "x_label": "Time (minutes post-trigger)",
+    "y_label": "Extracellular glutamate (\u03bcM)",
+    "series": [
+      {
+        "name": "Normal responder",
+        "data": [[0,5],[2,12],[5,18],[10,22],[15,20],[20,15],[30,8],[45,6],[60,5]],
+        "color": "#4488ff"
+      },
+      {
+        "name": "Sensitized (childhood-onset)",
+        "data": [[0,8],[2,25],[5,45],[10,55],[15,52],[20,48],[30,40],[45,30],[60,22],[90,15],[120,10]],
+        "color": "#ff3366"
+      }
+    ],
+    "annotations": [
+      {"y": 35, "label": "PFC functional deactivation threshold", "style": "dashed", "color": "#ffaa00"}
+    ],
+    "source": "Modeled from Moghaddam 1993, Popoli et al. 2012"
+  },
+  "plot2_nmda_voltage": {
+    "title": "NMDA Conductance vs. Membrane Potential",
+    "x_label": "Membrane potential (mV)",
+    "y_label": "Normalized NMDA conductance",
+    "x_range": [-80, 40],
+    "series": [
+      {"name": "Normal (Mg\u00b2\u207a block)", "color": "#4488ff"},
+      {"name": "Under glutamate excess", "color": "#ff3366"},
+      {"name": "With memantine", "color": "#00ff88"}
+    ],
+    "source": "Johnson & Bhatt 1990"
+  },
+  "plot3_inverted_u": {
+    "title": "PFC Function vs. Catecholamine/Cortisol Level (Arnsten Model)",
+    "x_label": "Catecholamine / cortisol level (normalized)",
+    "y_label": "PFC functional capacity (normalized)",
+    "annotations": [
+      {"x_range": [0.3, 0.6], "label": "Churchill operating zone", "color": "#00ff88"},
+      {"x_range": [0.7, 0.85], "label": "Acute trigger zone", "color": "#ff3366"},
+      {"x_range": [0.5, 0.7], "label": "Chronic stress baseline", "color": "#ffaa00"}
+    ],
+    "source": "Arnsten 2009, 2015"
+  },
+  "plot4_bac_impairment": {
+    "title": "BAC vs. Cognitive Performance: Two Phenotypes",
+    "x_label": "Blood Alcohol Concentration (mg/dL)",
+    "y_label": "Cognitive performance (normalized)",
+    "series": [
+      {"name": "Normal excitatory baseline", "color": "#4488ff"},
+      {"name": "High excitatory baseline", "color": "#ff3366"}
+    ],
+    "annotations": [
+      {"x_range": [20, 40], "label": "Churchill's operating range", "color": "#00ff88"}
+    ],
+    "source": "Wallner et al. 2003"
+  },
+  "plot5_receptor_occupancy": {
+    "title": "GABA-A Receptor Occupancy: Ethanol vs. Clonazepam",
+    "x_label": "Relative dose (normalized)",
+    "y_label": "GABA-A receptor occupancy (%)",
+    "series": [
+      {"name": "Ethanol (allosteric potentiation)", "color": "#4488ff"},
+      {"name": "Clonazepam (benzodiazepine site)", "color": "#ff3366"}
+    ],
+    "source": "Wallner et al. 2003, Vinkers & Bhatt 2012"
+  },
+  "plot6_receptor_density": {
+    "title": "GABA-A Receptor Density vs. Benzodiazepine Exposure Duration",
+    "x_label": "Duration of exposure (months)",
+    "y_label": "GABA-A receptor density (% baseline)",
+    "annotations": [
+      {"x": 8, "label": "Point of no easy return", "color": "#ff3366"}
+    ],
+    "source": "Vinkers & Bhatt 2012, Lader 2011"
+  },
+  "plot7_withdrawal": {
+    "title": "Withdrawal Severity vs. Taper Strategy",
+    "x_label": "Time (weeks)",
+    "y_label": "Symptom severity (normalized)",
+    "series": [
+      {"name": "Cold turkey", "color": "#ff3366"},
+      {"name": "Rapid taper (4 weeks)", "color": "#ffaa00"},
+      {"name": "Slow taper (6 months)", "color": "#4488ff"},
+      {"name": "Micro-taper (2+ years)", "color": "#00ff88"}
+    ],
+    "source": "Fluyau et al. 2018, Ashton 2005"
+  }
+}

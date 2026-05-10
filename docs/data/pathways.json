@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {"id": "threat", "label": "Threat Detection", "region": "Amygdala (BLA)", "tier": 0},
+    {"id": "hpa", "label": "HPA Axis", "region": "Hypothalamus", "tier": 1},
+    {"id": "crh", "label": "CRH Release", "region": "Paraventricular Nucleus", "tier": 1},
+    {"id": "acth", "label": "ACTH Release", "region": "Anterior Pituitary", "tier": 2},
+    {"id": "cortisol", "label": "Cortisol Release", "region": "Adrenal Cortex", "tier": 2},
+    {"id": "pfc_cortisol", "label": "Cortisol → PFC", "region": "Prefrontal Cortex", "tier": 3},
+    {"id": "glut_release", "label": "↑ Glutamate Release", "region": "PFC Synapses", "tier": 3},
+    {"id": "nmda_act", "label": "NMDA/AMPA Overactivation", "region": "Postsynaptic", "tier": 4},
+    {"id": "ca_influx", "label": "Ca²⁺ Influx", "region": "Dendritic Spines", "tier": 4},
+    {"id": "spine_retract", "label": "Dendritic Spine Retraction", "region": "PFC Layer III", "tier": 5},
+    {"id": "pfc_offline", "label": "PFC Functional Deactivation", "region": "dlPFC, vmPFC", "tier": 5},
+    {"id": "cortical_shutdown", "label": "Cortical Shutdown", "region": "Executive Network", "tier": 6},
+    {"id": "amygdala_dom", "label": "Amygdala/BG Dominance", "region": "Subcortical", "tier": 6},
+    {"id": "behavioral", "label": "Behavioral Output", "region": "Motor/Autonomic", "tier": 7},
+    {"id": "ne_lc", "label": "NE (Locus Coeruleus)", "region": "Brainstem", "tier": 1},
+    {"id": "eaat2_suppression", "label": "EAAT2 Suppression", "region": "Astrocytes", "tier": 3}
+  ],
+  "edges": [
+    {"source": "threat", "target": "hpa", "type": "activation"},
+    {"source": "threat", "target": "ne_lc", "type": "activation"},
+    {"source": "hpa", "target": "crh", "type": "activation"},
+    {"source": "crh", "target": "acth", "type": "activation"},
+    {"source": "acth", "target": "cortisol", "type": "activation"},
+    {"source": "cortisol", "target": "pfc_cortisol", "type": "activation"},
+    {"source": "pfc_cortisol", "target": "glut_release", "type": "activation"},
+    {"source": "pfc_cortisol", "target": "eaat2_suppression", "type": "inhibition"},
+    {"source": "eaat2_suppression", "target": "glut_release", "type": "activation"},
+    {"source": "glut_release", "target": "nmda_act", "type": "activation"},
+    {"source": "nmda_act", "target": "ca_influx", "type": "activation"},
+    {"source": "ca_influx", "target": "spine_retract", "type": "activation"},
+    {"source": "spine_retract", "target": "pfc_offline", "type": "activation"},
+    {"source": "pfc_offline", "target": "cortical_shutdown", "type": "activation"},
+    {"source": "cortical_shutdown", "target": "amygdala_dom", "type": "activation"},
+    {"source": "amygdala_dom", "target": "behavioral", "type": "activation"},
+    {"source": "ne_lc", "target": "glut_release", "type": "activation"},
+    {"source": "amygdala_dom", "target": "threat", "type": "feedback"}
+  ]
+}

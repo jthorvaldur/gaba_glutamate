@@ -1,0 +1,155 @@
+[
+  {
+    "id": "glutamate",
+    "name": "Glutamate",
+    "role": "Primary excitatory neurotransmitter",
+    "receptors": ["NMDA", "AMPA", "Kainate", "mGluR"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/611",
+    "color": "#ff3366",
+    "category": "excitatory"
+  },
+  {
+    "id": "gaba",
+    "name": "GABA",
+    "role": "Primary inhibitory neurotransmitter",
+    "receptors": ["GABA-A", "GABA-B"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/119",
+    "color": "#00ff88",
+    "category": "inhibitory"
+  },
+  {
+    "id": "cortisol",
+    "name": "Cortisol",
+    "role": "Stress hormone — HPA axis effector",
+    "receptors": ["Glucocorticoid receptor (GR)", "Mineralocorticoid receptor (MR)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/5754",
+    "color": "#ffaa00",
+    "category": "hormone"
+  },
+  {
+    "id": "crh",
+    "name": "CRH",
+    "role": "HPA axis initiator (hypothalamic)",
+    "receptors": ["CRH-R1", "CRH-R2"],
+    "uniprot": "https://www.uniprot.org/uniprot/P06850",
+    "color": "#ffaa00",
+    "category": "hormone"
+  },
+  {
+    "id": "acth",
+    "name": "ACTH",
+    "role": "Pituitary → adrenal signaling peptide",
+    "receptors": ["MC2R"],
+    "uniprot": "https://www.uniprot.org/uniprot/P01189",
+    "color": "#ffaa00",
+    "category": "hormone"
+  },
+  {
+    "id": "norepinephrine",
+    "name": "Norepinephrine",
+    "role": "Arousal / locus coeruleus activation",
+    "receptors": ["α1", "α2", "β adrenergic"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/439260",
+    "color": "#ff6644",
+    "category": "excitatory"
+  },
+  {
+    "id": "ethanol",
+    "name": "Ethanol",
+    "role": "GABAergic agonist + NMDA antagonist",
+    "receptors": ["GABA-A (allosteric)", "NMDA (antagonist)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+    "color": "#4488ff",
+    "category": "modulatory"
+  },
+  {
+    "id": "clonazepam",
+    "name": "Clonazepam",
+    "role": "Benzodiazepine / GABA-A PAM",
+    "receptors": ["GABA-A (α1,α2,α3,α5 subunits)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/2802",
+    "color": "#4488ff",
+    "category": "modulatory"
+  },
+  {
+    "id": "riluzole",
+    "name": "Riluzole",
+    "role": "Glutamate release inhibitor",
+    "receptors": ["Presynaptic Na+ channels", "EAAT2 enhancer"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/5070",
+    "color": "#00ff88",
+    "category": "therapeutic"
+  },
+  {
+    "id": "memantine",
+    "name": "Memantine",
+    "role": "Voltage-dependent NMDA channel blocker",
+    "receptors": ["NMDA receptor (channel blocker)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/4054",
+    "color": "#00ff88",
+    "category": "therapeutic"
+  },
+  {
+    "id": "lamotrigine",
+    "name": "Lamotrigine",
+    "role": "Glutamate release inhibitor (anticonvulsant)",
+    "receptors": ["Voltage-gated Na+ channels"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/3878",
+    "color": "#00ff88",
+    "category": "therapeutic"
+  },
+  {
+    "id": "nac",
+    "name": "N-Acetylcysteine (NAC)",
+    "role": "Glutamate modulator (xCT antiporter)",
+    "receptors": ["Cystine-glutamate antiporter (xCT)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/12035",
+    "color": "#73daca",
+    "category": "therapeutic"
+  },
+  {
+    "id": "theanine",
+    "name": "L-Theanine",
+    "role": "Glutamate analog / partial modulator",
+    "receptors": ["Glutamate receptors (partial)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/228398",
+    "color": "#73daca",
+    "category": "therapeutic"
+  },
+  {
+    "id": "magnesium",
+    "name": "Magnesium",
+    "role": "NMDA voltage-gate blocker (endogenous)",
+    "receptors": ["NMDA receptor (Mg2+ block)"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/5462224",
+    "color": "#73daca",
+    "category": "therapeutic"
+  },
+  {
+    "id": "taurine",
+    "name": "Taurine",
+    "role": "Inhibitory neuromodulator",
+    "receptors": ["GABA-A", "Glycine receptors"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/1123",
+    "color": "#73daca",
+    "category": "therapeutic"
+  },
+  {
+    "id": "ketamine",
+    "name": "Ketamine (low-dose)",
+    "role": "NMDA antagonist + BDNF/mTOR cascade trigger",
+    "receptors": ["NMDA receptor"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/3821",
+    "color": "#bb9af7",
+    "category": "therapeutic"
+  },
+  {
+    "id": "propranolol",
+    "name": "Propranolol",
+    "role": "β-adrenergic blocker (prevents NE amplification)",
+    "receptors": ["β1", "β2 adrenergic"],
+    "pubchem": "https://pubchem.ncbi.nlm.nih.gov/compound/4946",
+    "color": "#4488ff",
+    "category": "therapeutic"
+  }
+]

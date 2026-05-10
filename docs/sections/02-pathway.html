@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02 — Full Neurochemical Pathway</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">Excitatory Brain</a>
+  <ul class="nav-links">
+    <li><a href="01-phenotype.html">Phenotype</a></li>
+    <li><a href="02-pathway.html" class="active">Pathway</a></li>
+    <li><a href="03-glutamate-storm.html">Storm</a></li>
+    <li><a href="04-gaba-homeostasis.html">GABA</a></li>
+    <li><a href="05-benzo-trap.html">Benzos</a></li>
+    <li><a href="06-churchill.html">Churchill</a></li>
+    <li><a href="07-solutions.html">Solutions</a></li>
+    <li><a href="08-triggers.html">Triggers</a></li>
+    <li><a href="09-references.html">References</a></li>
+  </ul>
+</nav>
+
+<div class="container page-content">
+
+  <div class="section-label">Section 02</div>
+  <h1>Full Neurochemical Pathway</h1>
+  <p style="max-width:720px; margin-top:1rem;">
+    The complete chain from threat detection to cortical shutdown. Click any node for compound information and receptor binding details.
+  </p>
+
+  <div class="legend" style="margin:1.5rem 0;">
+    <div class="legend-item"><div class="swatch" style="background:#ff3366"></div>Excitatory / Activation</div>
+    <div class="legend-item"><div class="swatch" style="background:#00ff88"></div>Inhibitory</div>
+    <div class="legend-item"><div class="swatch" style="background:#ffaa00"></div>Stress Hormones</div>
+    <div class="legend-item"><div class="swatch" style="background:#666"></div>Feedback Loop</div>
+  </div>
+
+  <div id="pathway-container" style="width:100%; min-height:650px; background:var(--bg2); border:1px solid var(--border); border-radius:12px; position:relative;"></div>
+
+  <div class="content-section" style="margin-top:2rem;">
+    <h2>Chemical Compound Index</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Compound</th><th>Role</th><th>Receptor/Target</th><th>Link</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="color:#ff3366">Glutamate</td><td>Primary excitatory NT</td><td>NMDA, AMPA, kainate, mGluR</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/611" target="_blank">PubChem 611</a></td></tr>
+        <tr><td style="color:#00ff88">GABA</td><td>Primary inhibitory NT</td><td>GABA-A, GABA-B</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/119" target="_blank">PubChem 119</a></td></tr>
+        <tr><td style="color:#ffaa00">Cortisol</td><td>Stress hormone</td><td>Glucocorticoid receptor (GR)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5754" target="_blank">PubChem 5754</a></td></tr>
+        <tr><td style="color:#ffaa00">CRH</td><td>HPA axis initiator</td><td>CRH-R1, CRH-R2</td><td><a href="https://www.uniprot.org/uniprot/P06850" target="_blank">UniProt P06850</a></td></tr>
+        <tr><td style="color:#ffaa00">ACTH</td><td>Pituitary → adrenal signal</td><td>MC2R</td><td><a href="https://www.uniprot.org/uniprot/P01189" target="_blank">UniProt P01189</a></td></tr>
+        <tr><td style="color:#ff6644">Norepinephrine</td><td>Arousal / locus coeruleus</td><td>α1, α2, β adrenergic</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/439260" target="_blank">PubChem 439260</a></td></tr>
+        <tr><td style="color:#4488ff">Ethanol</td><td>GABAergic agonist / NMDA antagonist</td><td>GABA-A (allosteric), NMDA (antagonist)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/702" target="_blank">PubChem 702</a></td></tr>
+        <tr><td style="color:#4488ff">Clonazepam</td><td>Benzodiazepine / GABA-A PAM</td><td>GABA-A (α1,α2,α3,α5)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/2802" target="_blank">PubChem 2802</a></td></tr>
+        <tr><td style="color:#00ff88">Riluzole</td><td>Glutamate release inhibitor</td><td>Presynaptic Na⁺ channels, EAAT2</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5070" target="_blank">PubChem 5070</a></td></tr>
+        <tr><td style="color:#00ff88">Memantine</td><td>NMDA antagonist (voltage-dep.)</td><td>NMDA receptor (channel blocker)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/4054" target="_blank">PubChem 4054</a></td></tr>
+        <tr><td style="color:#00ff88">Lamotrigine</td><td>Glutamate release inhibitor</td><td>Voltage-gated Na⁺ channels</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/3878" target="_blank">PubChem 3878</a></td></tr>
+        <tr><td style="color:#73daca">NAC</td><td>Glutamate modulator</td><td>Cystine-glutamate antiporter (xCT)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/12035" target="_blank">PubChem 12035</a></td></tr>
+        <tr><td style="color:#73daca">L-Theanine</td><td>Glutamate analog / modulator</td><td>Glutamate receptors (partial)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/228398" target="_blank">PubChem 228398</a></td></tr>
+        <tr><td style="color:#73daca">Magnesium</td><td>NMDA voltage-gate blocker</td><td>NMDA receptor (Mg²⁺ block)</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/5462224" target="_blank">PubChem 5462224</a></td></tr>
+        <tr><td style="color:#73daca">Taurine</td><td>Inhibitory neuromodulator</td><td>GABA-A, glycine receptors</td><td><a href="https://pubchem.ncbi.nlm.nih.gov/compound/1123" target="_blank">PubChem 1123</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:3rem; display:flex; justify-content:space-between; font-size:0.8rem;">
+    <a href="01-phenotype.html">&larr; 01: Phenotype</a>
+    <a href="03-glutamate-storm.html">03: Glutamate Storm &rarr;</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://jthorvaldur.github.io">Thorarinson</a> &middot; <a href="https://github.com/jthorvaldur/gaba_glutamate">Source</a>
+</footer>
+
+<script>
+// D3.js Pathway Visualization
+(function() {
+  const container = document.getElementById('pathway-container');
+  const width = container.clientWidth;
+  const height = 650;
+
+  const svg = d3.select('#pathway-container')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+  // Define nodes with positions (layered top-to-bottom)
+  const nodes = [
+    {id: 'threat', label: 'Threat Detection', region: 'Amygdala (BLA)', tier: 0, color: '#ff3366'},
+    {id: 'hpa', label: 'HPA Axis Activation', region: 'Hypothalamus', tier: 1, color: '#ffaa00'},
+    {id: 'ne_lc', label: 'NE Release', region: 'Locus Coeruleus', tier: 1, color: '#ff6644'},
+    {id: 'crh', label: 'CRH Release', region: 'PVN', tier: 2, color: '#ffaa00'},
+    {id: 'acth', label: 'ACTH Release', region: 'Anterior Pituitary', tier: 3, color: '#ffaa00'},
+    {id: 'cortisol', label: 'Cortisol Release', region: 'Adrenal Cortex', tier: 4, color: '#ffaa00'},
+    {id: 'glut_release', label: '↑ Glutamate Release', region: 'PFC Synapses', tier: 5, color: '#ff3366'},
+    {id: 'eaat2', label: 'EAAT2 Suppression', region: 'Astrocytes', tier: 5, color: '#ff3366'},
+    {id: 'nmda', label: 'NMDA/AMPA Overactivation', region: 'Postsynaptic', tier: 6, color: '#ff3366'},
+    {id: 'calcium', label: 'Ca²⁺ Influx', region: 'Dendritic Spines', tier: 7, color: '#ff3366'},
+    {id: 'spine', label: 'Spine Retraction', region: 'PFC Layer III', tier: 8, color: '#ff3366'},
+    {id: 'pfc_off', label: 'PFC Offline', region: 'dlPFC / vmPFC', tier: 9, color: '#ffaa00'},
+    {id: 'amygdala_dom', label: 'Amygdala Dominance', region: 'Subcortical', tier: 10, color: '#ff3366'},
+    {id: 'output', label: 'Behavioral Output', region: 'IQ drop 30-50pts', tier: 11, color: '#ff3366'}
+  ];
+
+  const edges = [
+    {source: 'threat', target: 'hpa', type: 'activation'},
+    {source: 'threat', target: 'ne_lc', type: 'activation'},
+    {source: 'hpa', target: 'crh', type: 'activation'},
+    {source: 'crh', target: 'acth', type: 'activation'},
+    {source: 'acth', target: 'cortisol', type: 'activation'},
+    {source: 'cortisol', target: 'glut_release', type: 'activation'},
+    {source: 'cortisol', target: 'eaat2', type: 'inhibition'},
+    {source: 'eaat2', target: 'glut_release', type: 'activation'},
+    {source: 'ne_lc', target: 'glut_release', type: 'activation'},
+    {source: 'glut_release', target: 'nmda', type: 'activation'},
+    {source: 'nmda', target: 'calcium', type: 'activation'},
+    {source: 'calcium', target: 'spine', type: 'activation'},
+    {source: 'spine', target: 'pfc_off', type: 'activation'},
+    {source: 'pfc_off', target: 'amygdala_dom', type: 'activation'},
+    {source: 'amygdala_dom', target: 'output', type: 'activation'},
+    {source: 'amygdala_dom', target: 'threat', type: 'feedback'}
+  ];
+
+  // Layout: position nodes by tier
+  const tiers = {};
+  nodes.forEach(n => {
+    if (!tiers[n.tier]) tiers[n.tier] = [];
+    tiers[n.tier].push(n);
+  });
+
+  const tierCount = Object.keys(tiers).length;
+  const yStep = (height - 80) / (tierCount - 1);
+
+  Object.entries(tiers).forEach(([tier, nodesInTier]) => {
+    const y = 40 + parseInt(tier) * yStep;
+    const xStep = width / (nodesInTier.length + 1);
+    nodesInTier.forEach((n, i) => {
+      n.x = xStep * (i + 1);
+      n.y = y;
+    });
+  });
+
+  // Create node lookup
+  const nodeMap = {};
+  nodes.forEach(n => nodeMap[n.id] = n);
+
+  // Draw edges
+  const defs = svg.append('defs');
+  defs.append('marker')
+    .attr('id', 'arrow')
+    .attr('viewBox', '0 0 10 10')
+    .attr('refX', 10).attr('refY', 5)
+    .attr('markerWidth', 6).attr('markerHeight', 6)
+    .attr('orient', 'auto-start-reverse')
+    .append('path')
+    .attr('d', 'M 0 0 L 10 5 L 0 10 z')
+    .attr('fill', '#ff3366');
+
+  defs.append('marker')
+    .attr('id', 'arrow-feedback')
+    .attr('viewBox', '0 0 10 10')
+    .attr('refX', 10).attr('refY', 5)
+    .attr('markerWidth', 6).attr('markerHeight', 6)
+    .attr('orient', 'auto-start-reverse')
+    .append('path')
+    .attr('d', 'M 0 0 L 10 5 L 0 10 z')
+    .attr('fill', '#666');
+
+  edges.forEach(e => {
+    const s = nodeMap[e.source];
+    const t = nodeMap[e.target];
+    if (!s || !t) return;
+
+    const isFeedback = e.type === 'feedback';
+    const color = isFeedback ? '#444' : (e.type === 'inhibition' ? '#00ff88' : '#ff336688');
+
+    if (isFeedback) {
+      // Curved feedback arrow
+      const path = svg.append('path')
+        .attr('d', `M ${s.x + 60} ${s.y} C ${width - 30} ${s.y}, ${width - 30} ${t.y}, ${t.x + 60} ${t.y}`)
+        .attr('fill', 'none')
+        .attr('stroke', color)
+        .attr('stroke-width', 1.5)
+        .attr('stroke-dasharray', '4,4')
+        .attr('marker-end', 'url(#arrow-feedback)');
+    } else {
+      svg.append('line')
+        .attr('x1', s.x).attr('y1', s.y + 12)
+        .attr('x2', t.x).attr('y2', t.y - 12)
+        .attr('stroke', color)
+        .attr('stroke-width', 1.5)
+        .attr('marker-end', 'url(#arrow)');
+    }
+  });
+
+  // Draw nodes
+  const nodeGroups = svg.selectAll('.node')
+    .data(nodes)
+    .enter()
+    .append('g')
+    .attr('class', 'pathway-node')
+    .attr('transform', d => `translate(${d.x}, ${d.y})`);
+
+  nodeGroups.append('rect')
+    .attr('x', -55).attr('y', -14)
+    .attr('width', 110).attr('height', 28)
+    .attr('rx', 6)
+    .attr('fill', d => d.color + '18')
+    .attr('stroke', d => d.color + '55')
+    .attr('stroke-width', 1);
+
+  nodeGroups.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '0.35em')
+    .style('font-family', "'JetBrains Mono', monospace")
+    .style('font-size', '9px')
+    .style('fill', '#e8e8f4')
+    .text(d => d.label);
+
+  nodeGroups.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '1.8em')
+    .style('font-family', "'JetBrains Mono', monospace")
+    .style('font-size', '7px')
+    .style('fill', '#888')
+    .text(d => d.region);
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    const newWidth = container.clientWidth;
+    svg.attr('width', newWidth);
+  });
+})();
+</script>
+
+</body>
+</html>
