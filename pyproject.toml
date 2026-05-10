@@ -1,0 +1,14 @@
+[project]
+name = "gaba-glutamate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.100.0",
+    "click>=8.3.3",
+    "httpx>=0.28.1",
+    "pyyaml>=6.0.3",
+    "qdrant-client>=1.17.1",
+    "tqdm>=4.67.3",
+]
