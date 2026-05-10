@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07 — Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">Excitatory Brain</a>
+  <ul class="nav-links">
+    <li><a href="01-phenotype.html">Phenotype</a></li>
+    <li><a href="02-pathway.html">Pathway</a></li>
+    <li><a href="03-glutamate-storm.html">Storm</a></li>
+    <li><a href="04-gaba-homeostasis.html">GABA</a></li>
+    <li><a href="05-benzo-trap.html">Benzos</a></li>
+    <li><a href="06-churchill.html">Churchill</a></li>
+    <li><a href="07-solutions.html" class="active">Solutions</a></li>
+    <li><a href="08-triggers.html">Triggers</a></li>
+    <li><a href="09-references.html">References</a></li>
+  </ul>
+</nav>
+
+<div class="container page-content">
+
+  <div class="section-label">Section 07</div>
+  <h1>Solutions</h1>
+  <p style="max-width:720px; margin-top:1rem;">
+    Organized by mechanism of action. The key insight: target the glutamate side (the actual problem) rather than the GABA side (the symptomatic deficit).
+  </p>
+
+  <!-- Section A -->
+  <div class="content-section">
+    <h2 style="color:var(--inhibitory);">A. Glutamate-Side Pharmacology</h2>
+    <p>These target the actual problem — excessive glutamatergic drive — rather than compensating downstream with GABAergic enhancement.</p>
+    <table class="data-table">
+      <thead><tr><th>Compound</th><th>Mechanism</th><th>Evidence</th><th>Risk</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:#00ff88">Riluzole</td>
+          <td>Inhibits presynaptic glutamate release; enhances EAAT2 reuptake</td>
+          <td>Phase II for treatment-resistant anxiety, OCD, PTSD</td>
+          <td>Hepatotoxicity monitoring (ALT/AST q3mo)</td>
+          <td>Most mechanistically targeted. FDA-approved for ALS. 50mg BID. No dependency. No sedation.</td>
+        </tr>
+        <tr>
+          <td style="color:#00ff88">Memantine</td>
+          <td>Voltage-dependent NMDA channel blocker</td>
+          <td>Strong for excitotoxicity; emerging for anxiety/PTSD</td>
+          <td>Mild (dizziness, headache). No dependency.</td>
+          <td>Only blocks pathologically high NMDA activation. Normal signaling preserved. 5-20mg/day.</td>
+        </tr>
+        <tr>
+          <td style="color:#00ff88">Lamotrigine</td>
+          <td>Voltage-gated Na⁺ channel inhibition → reduces glutamate release</td>
+          <td>Strong for bipolar; emerging for PTSD, anxiety</td>
+          <td>Stevens-Johnson syndrome risk (slow titration required)</td>
+          <td>Better side-effect profile than most anticonvulsants. Widely prescribed.</td>
+        </tr>
+        <tr>
+          <td style="color:#73daca">NAC</td>
+          <td>Modulates cystine-glutamate antiporter; restores extracellular glutamate homeostasis</td>
+          <td>Moderate for OCD, addiction, TBI</td>
+          <td>Very low risk; OTC</td>
+          <td>Addresses tonic glutamate. Insufficient for phasic surges alone.</td>
+        </tr>
+        <tr>
+          <td style="color:#bb9af7">Ketamine (low-dose)</td>
+          <td>NMDA antagonist; triggers BDNF/mTOR → rapid synaptogenesis</td>
+          <td>Strong for treatment-resistant depression</td>
+          <td>Dissociation, abuse potential; requires clinical supervision</td>
+          <td>Addresses both acute glutamate excess AND structural repair (PFC dendritic regrowth).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout success" style="margin-top:1.5rem;">
+      <p><strong>Combined protocol (most targeted):</strong> Riluzole (reduces glutamate release) + Memantine (blocks excess NMDA activation) = two-layer defense against phasic surges. No dependency risk. No cognitive impairment. Can be combined with low-dose ketamine for structural repair.</p>
+    </div>
+
+    <div class="callout" style="margin-top:1rem;">
+      <p><strong>Prescriber framing:</strong> "I have a glutamate-mediated stress response that causes acute prefrontal deactivation. Riluzole targets presynaptic glutamate release. I'm requesting an off-label trial based on Pittenger 2008 and Mathew 2005."</p>
+    </div>
+  </div>
+
+  <!-- Section B -->
+  <div class="content-section">
+    <h2 style="color:var(--modulatory);">B. GABA-Side Non-Pharmacological</h2>
+    <p>Building endogenous inhibitory capacity rather than relying on exogenous substances.</p>
+    <table class="data-table">
+      <thead><tr><th>Intervention</th><th>Mechanism</th><th>Evidence</th><th>Practical</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:#4488ff">Transcutaneous Vagal Nerve Stimulation (taVNS)</td>
+          <td>NTS → LC → PFC circuit modulation; restores PFC-amygdala connectivity</td>
+          <td>Growing; multiple RCTs for PTSD, depression</td>
+          <td>Consumer devices (Nuvana, Xen). 15-30 min/day.</td>
+        </tr>
+        <tr>
+          <td style="color:#4488ff">Neurofeedback (PFC alpha/theta)</td>
+          <td>Directly trains frontal alpha maintenance under simulated stress</td>
+          <td>Moderate-strong for PTSD; emerging for executive function</td>
+          <td>20-40 sessions. Expensive but structural effects on fMRI.</td>
+        </tr>
+        <tr>
+          <td style="color:#4488ff">Cold Exposure (controlled)</td>
+          <td>Massive NE spike → HPA axis recalibration; decouples sympathetic from cortical shutdown</td>
+          <td>Emerging; mechanistically sound</td>
+          <td>30-60 sec cold water. Key: voluntary controllable stressor trains decoupling.</td>
+        </tr>
+        <tr>
+          <td style="color:#4488ff">HIIT (High-Intensity Interval)</td>
+          <td>Upregulates BDNF → PFC neuroplasticity; increases endogenous GABA production</td>
+          <td>Strong</td>
+          <td>20-30 min, 3x/week. Dose-dependent.</td>
+        </tr>
+        <tr>
+          <td style="color:#4488ff">Yoga Nidra / NSDR</td>
+          <td>Increases striatal dopamine; modulates GABA-A receptor expression</td>
+          <td>Emerging (limited RCTs)</td>
+          <td>20-30 min protocols. Distinct from meditation — closer to pharmacological intervention.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section C -->
+  <div class="content-section">
+    <h2 style="color:var(--stress);">C. Trigger-Specific Interventions</h2>
+    <p>For the phasic problem — acute situations where the surge is anticipated or beginning.</p>
+    <table class="data-table">
+      <thead><tr><th>Intervention</th><th>Mechanism</th><th>When to Use</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:#ffaa00">Propranolol (acute, PRN)</td>
+          <td>β-adrenergic blockade → prevents NE from amplifying the amygdala → PFC cascade</td>
+          <td>Pre-court, pre-confrontation. Does not sedate. Does not impair cognition. Blocks the amplification, not the signal.</td>
+        </tr>
+        <tr>
+          <td style="color:#ffaa00">Sensory Anchoring Protocols</td>
+          <td>Forces PFC engagement via deliberate perceptual processing</td>
+          <td>During acute episodes. Not mindfulness — targeted sensory channel recruitment to re-engage PFC.</td>
+        </tr>
+        <tr>
+          <td style="color:#ffaa00">Pre-Exposure Written Preparation</td>
+          <td>Offloads complex reasoning to non-triggered state; reduces real-time cognitive demand</td>
+          <td>12-24 hours before anticipated trigger. Motions, talking points, decision trees prepared in advance.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section D -->
+  <div class="content-section">
+    <h2 style="color:var(--excitatory);">D. Why Standard Approaches Fail</h2>
+    <table class="data-table">
+      <thead><tr><th>Approach</th><th>Why It Fails for This Phenotype</th></tr></thead>
+      <tbody>
+        <tr><td>CBT</td><td>Assumes PFC is online to execute cognitive reframing. In acute glutamate storm, PFC <em>is the thing that's offline</em>.</td></tr>
+        <tr><td>"Just relax" / generic mindfulness</td><td>Insufficient signal to overcome glutamatergic drive. Like whispering at a jet engine.</td></tr>
+        <tr><td>Supplement stacks (Mg, theanine, taurine)</td><td>Address tonic glutamate baseline. Phasic surges overwhelm the buffer in seconds.</td></tr>
+        <tr><td>SSRIs</td><td>Target serotonin, which is downstream and not the primary driver. May help mood but don't touch the glutamate cascade.</td></tr>
+        <tr><td>Benzodiazepines</td><td>Address the symptom (GABA deficit) but create a worse problem (receptor downregulation, dependency, catastrophic withdrawal).</td></tr>
+        <tr><td>Alcohol (chronic)</td><td>Works short-term but drives GABA-A receptor adaptation over years. Endogenous capacity atrophies.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-section">
+    <h2>Sources</h2>
+    <ul style="list-style:none; font-size:0.85rem;">
+      <li style="margin-bottom:0.8rem;">Pittenger, C. et al. (2008). Riluzole augmentation in treatment-resistant OCD. <em>Biol Psychiatry</em>, 63(11), 978-980.</li>
+      <li style="margin-bottom:0.8rem;">Mathew, S.J. et al. (2005). Riluzole for anxiety. <em>Am J Psychiatry</em>, 162(11), 2135-2138.</li>
+      <li style="margin-bottom:0.8rem;">Zarate, C.A. et al. (2006). A randomized trial of an NMDA antagonist in treatment-resistant major depression. <em>Arch Gen Psychiatry</em>, 63(8), 856-864.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top:3rem; display:flex; justify-content:space-between; font-size:0.8rem;">
+    <a href="06-churchill.html">&larr; 06: Churchill</a>
+    <a href="08-triggers.html">08: Triggers &rarr;</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://jthorvaldur.github.io">Thorarinson</a> &middot; <a href="https://github.com/jthorvaldur/gaba_glutamate">Source</a>
+</footer>
+
+</body>
+</html>

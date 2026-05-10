@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>08 — Trigger Mapping & Temporal Binding Collapse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">Excitatory Brain</a>
+  <ul class="nav-links">
+    <li><a href="01-phenotype.html">Phenotype</a></li>
+    <li><a href="02-pathway.html">Pathway</a></li>
+    <li><a href="03-glutamate-storm.html">Storm</a></li>
+    <li><a href="04-gaba-homeostasis.html">GABA</a></li>
+    <li><a href="05-benzo-trap.html">Benzos</a></li>
+    <li><a href="06-churchill.html">Churchill</a></li>
+    <li><a href="07-solutions.html">Solutions</a></li>
+    <li><a href="08-triggers.html" class="active">Triggers</a></li>
+    <li><a href="09-references.html">References</a></li>
+  </ul>
+</nav>
+
+<div class="container page-content">
+
+  <div class="section-label">Section 08</div>
+  <h1>Trigger Mapping &amp; Temporal Binding Collapse</h1>
+
+  <div class="content-section">
+    <h2>Five Trigger Channels</h2>
+    <p>The trigger taxonomy for the high-excitation phenotype falls into five sensory/contextual channels. Each operates independently and they can compound:</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.5rem 0;">
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.3rem;">
+        <h4 style="color:var(--excitatory);">1. Visual</h4>
+        <ul style="color:var(--text2); font-size:0.82rem; padding-left:1rem; line-height:1.9;">
+          <li>Faces of opposing party / authority figures</li>
+          <li>Specific facial expressions (contempt, dismissal)</li>
+          <li>Spatial configurations resembling threat environments</li>
+          <li>Documents (motions, court orders, formal notices)</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.3rem;">
+        <h4 style="color:var(--stress);">2. Auditory</h4>
+        <ul style="color:var(--text2); font-size:0.82rem; padding-left:1rem; line-height:1.9;">
+          <li>Tone of voice (accusatory, condescending, dismissive)</li>
+          <li>Specific phrases ("the respondent failed to...")</li>
+          <li>Procedural cadence / courtroom speech patterns</li>
+          <li>Phone ringtone associated with opposing counsel</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.3rem;">
+        <h4 style="color:var(--modulatory);">3. Procedural</h4>
+        <ul style="color:var(--text2); font-size:0.82rem; padding-left:1rem; line-height:1.9;">
+          <li>Being directly addressed by authority (judge)</li>
+          <li>Required to respond in real-time</li>
+          <li>Performing under observation</li>
+          <li>Real-time demand on PFC while threat-activated</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.3rem;">
+        <h4 style="color:var(--accent2);">4. Anticipatory</h4>
+        <ul style="color:var(--text2); font-size:0.82rem; padding-left:1rem; line-height:1.9;">
+          <li>The night before a hearing</li>
+          <li>Receiving court documents / service</li>
+          <li>Calendar notifications</li>
+          <li>Email from opposing counsel</li>
+          <li>Temporal proximity to event (hours/days before)</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.3rem;">
+        <h4 style="color:var(--therapeutic);">5. Somatic</h4>
+        <ul style="color:var(--text2); font-size:0.82rem; padding-left:1rem; line-height:1.9;">
+          <li>Elevated heart rate</li>
+          <li>Chest tightness / shallow breathing</li>
+          <li>Proprioceptive feedback loops</li>
+          <li>Feeds back into amygdala → sustains cascade</li>
+          <li>Persists after external trigger is removed</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="callout warning">
+      <p><strong>Key insight:</strong> The trigger often isn't the event itself — it's the <em>anticipatory</em> channel. The glutamate surge may peak 12-24 hours before the actual exposure. This has tactical implications: interventions (propranolol, vagal stimulation, written preparation) should be deployed at the anticipatory phase, not at the moment of exposure.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Temporal Binding Collapse</h2>
+    <p>Normal PFC function maintains a "temporal workspace" — a buffer holding representations of past, present, and future in distinct registers, linked by causal/narrative structure.</p>
+
+    <h3>Normal State</h3>
+    <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--text2);">
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <span style="color:var(--modulatory);">PAST</span>
+        <span style="color:var(--dim);">→</span>
+        <span style="color:var(--inhibitory);">PRESENT</span>
+        <span style="color:var(--dim);">→</span>
+        <span style="color:var(--accent2);">FUTURE</span>
+      </div>
+      <div style="margin-top:0.5rem; color:var(--dim);">Distinct temporal registers. Causal linking intact. "That happened then; this is now; that may happen later."</div>
+    </div>
+
+    <h3>Collapsed State (PFC Offline)</h3>
+    <div style="background:var(--glow-excitatory); border:1px solid rgba(255,51,102,0.3); border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--text2);">
+      <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+        <span style="color:var(--excitatory); background:rgba(255,51,102,0.2); padding:2px 8px; border-radius:4px;">PAST-TRAUMA</span>
+        <span style="color:var(--excitatory);">≡</span>
+        <span style="color:var(--excitatory); background:rgba(255,51,102,0.2); padding:2px 8px; border-radius:4px;">NOW</span>
+        <span style="color:var(--excitatory);">≡</span>
+        <span style="color:var(--excitatory); background:rgba(255,51,102,0.2); padding:2px 8px; border-radius:4px;">FUTURE-THREAT</span>
+      </div>
+      <div style="margin-top:0.5rem; color:var(--excitatory);">All temporal registers collapsed into present-tense percepts. Everything is happening NOW.</div>
+    </div>
+
+    <p style="margin-top:1.5rem;">This is why standard mindfulness ("return to the present moment") fails catastrophically. In temporal binding collapse, the problem IS that everything has become the present moment. The instruction is meaningless.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>PFC Recruitment Protocols</h2>
+    <p><strong>These are not relaxation techniques.</strong> They are PFC recruitment protocols. The goal is not to feel calm — it's to re-activate the circuit that can think.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Protocol</th><th>Mechanism</th><th>Why It Works</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:var(--inhibitory)">Spatial Counting</td>
+          <td>Count objects by category ("how many right angles?")</td>
+          <td>Recruits dorsolateral PFC (spatial working memory) through a channel that isn't threat-contaminated</td>
+        </tr>
+        <tr>
+          <td style="color:var(--inhibitory)">Temperature Differential</td>
+          <td>Hold cold in one hand, warm in the other</td>
+          <td>Bilateral asymmetry requires cortical integration that pulls PFC back online</td>
+        </tr>
+        <tr>
+          <td style="color:var(--inhibitory)">Proprioceptive Precision</td>
+          <td>Press each fingertip to thumb in sequence while counting</td>
+          <td>Motor-sequence planning recruits premotor cortex → dense PFC connections</td>
+        </tr>
+        <tr>
+          <td style="color:var(--inhibitory)">Verbal Override</td>
+          <td>Describe environment aloud in technical language ("rectangular room, ~30ft, 4000K fluorescent")</td>
+          <td>Forces left-lateralized PFC engagement through analytical description</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout success">
+      <p><strong>The principle:</strong> PFC re-engagement requires forcing computation through non-threat-contaminated channels. Any task that demands cortical processing (spatial, motor-sequential, analytical-verbal) can serve this function — the specific task matters less than the computational demand.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Sources</h2>
+    <ul style="list-style:none; font-size:0.85rem;">
+      <li style="margin-bottom:0.8rem;">van der Kolk, B. (2014). <em>The Body Keeps the Score</em>. Viking.</li>
+      <li style="margin-bottom:0.8rem;">Lanius, R.A. et al. (2010). Emotion modulation in PTSD: clinical and neurobiological evidence for a dissociative subtype. <em>Am J Psychiatry</em>, 167(6), 640-647.</li>
+      <li style="margin-bottom:0.8rem;">Arnsten, A.F.T. (2015). Stress weakens prefrontal networks. <em>Nat Neurosci</em>, 18(10), 1376-1385. <a href="https://doi.org/10.1038/nn.4087" target="_blank">doi:10.1038/nn.4087</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:3rem; display:flex; justify-content:space-between; font-size:0.8rem;">
+    <a href="07-solutions.html">&larr; 07: Solutions</a>
+    <a href="09-references.html">09: References &rarr;</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://jthorvaldur.github.io">Thorarinson</a> &middot; <a href="https://github.com/jthorvaldur/gaba_glutamate">Source</a>
+</footer>
+
+</body>
+</html>

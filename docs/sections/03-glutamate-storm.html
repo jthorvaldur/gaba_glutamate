@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 — Phasic Glutamate Surge & Cortical Shutdown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">Excitatory Brain</a>
+  <ul class="nav-links">
+    <li><a href="01-phenotype.html">Phenotype</a></li>
+    <li><a href="02-pathway.html">Pathway</a></li>
+    <li><a href="03-glutamate-storm.html" class="active">Storm</a></li>
+    <li><a href="04-gaba-homeostasis.html">GABA</a></li>
+    <li><a href="05-benzo-trap.html">Benzos</a></li>
+    <li><a href="06-churchill.html">Churchill</a></li>
+    <li><a href="07-solutions.html">Solutions</a></li>
+    <li><a href="08-triggers.html">Triggers</a></li>
+    <li><a href="09-references.html">References</a></li>
+  </ul>
+</nav>
+
+<div class="container page-content">
+
+  <div class="section-label">Section 03</div>
+  <h1>Phasic Glutamate Surge &amp; Cortical Shutdown</h1>
+
+  <div class="content-section">
+    <h2>Tonic vs. Phasic Glutamate</h2>
+    <p><strong>Tonic glutamate</strong> is the resting-state extracellular concentration maintained by astrocytic release and reuptake equilibrium. Supplements (magnesium, theanine, NAC) modulate this level. It operates on a timescale of hours to days.</p>
+    <p><strong>Phasic glutamate</strong> is the acute surge triggered by cortisol-mediated presynaptic release during a stress response. It operates on a timescale of <em>seconds to minutes</em>. This is the storm.</p>
+    <div class="callout danger">
+      <p><strong>The timescale mismatch:</strong> Supplements that modulate tonic glutamate cannot intercept a phasic surge. The surge overwhelms the buffer in seconds. This is why "I take magnesium and theanine" doesn't prevent cortical shutdown during acute triggers.</p>
+    </div>
+  </div>
+
+  <!-- Plot 1: Glutamate vs Time -->
+  <div class="plot-container">
+    <div class="plot-title">Plot 1: Extracellular Glutamate During Acute Stress</div>
+    <div id="plot1" style="width:100%; height:400px;"></div>
+    <div class="plot-source">Source: Modeled from Moghaddam 1993, Popoli et al. 2012</div>
+  </div>
+
+  <div class="content-section">
+    <h2>The NMDA Receptor as Critical Gate</h2>
+    <p>At resting membrane potential (-70mV), the NMDA receptor channel is physically blocked by a Mg²⁺ ion. Normal synaptic transmission uses AMPA receptors. The NMDA channel only opens when:</p>
+    <ol style="color:var(--text2); padding-left:1.5rem; margin:1rem 0;">
+      <li>Glutamate binds the receptor (ligand-gated)</li>
+      <li>The membrane is sufficiently depolarized to displace Mg²⁺ (voltage-gated)</li>
+    </ol>
+    <p>Under a phasic glutamate surge, massive AMPA activation depolarizes the membrane, displacing Mg²⁺ from NMDA channels across a wide area simultaneously. The result: <strong>massive Ca²⁺ influx through NMDA channels</strong>.</p>
+  </div>
+
+  <!-- Plot 2: NMDA Voltage Curve -->
+  <div class="plot-container">
+    <div class="plot-title">Plot 2: NMDA Conductance vs. Membrane Potential</div>
+    <div id="plot2" style="width:100%; height:400px;"></div>
+    <div class="plot-source">Source: Johnson & Ascher 1990, Jahr & Stevens 1990</div>
+  </div>
+
+  <div class="content-section">
+    <h2>Ca²⁺ Influx: The Damage Mechanism</h2>
+    <p>Intracellular calcium is not just a signal — at pathological concentrations it triggers:</p>
+    <table class="data-table">
+      <thead><tr><th>Mechanism</th><th>Effect</th><th>Timescale</th></tr></thead>
+      <tbody>
+        <tr><td>Dendritic spine retraction</td><td>Physical disconnection of synaptic contacts</td><td>Minutes to hours</td></tr>
+        <tr><td>LTD induction</td><td>Long-term depression of synaptic strength</td><td>Hours to days</td></tr>
+        <tr><td>Calpain activation</td><td>Proteolytic degradation of cytoskeletal proteins</td><td>Minutes</td></tr>
+        <tr><td>Mitochondrial stress</td><td>ROS production, energy depletion</td><td>Minutes to hours</td></tr>
+      </tbody>
+    </table>
+    <p>This is the structural basis of "going offline." It is not psychological. It is not a choice. It is calcium-mediated disconnection of prefrontal circuits.</p>
+  </div>
+
+  <!-- Plot 3: Inverted-U (Arnsten Model) -->
+  <div class="plot-container">
+    <div class="plot-title">Plot 3: PFC Function vs. Catecholamine/Cortisol Level (Arnsten Model)</div>
+    <div id="plot3" style="width:100%; height:400px;"></div>
+    <div class="plot-source">Source: Arnsten 2009, 2015</div>
+  </div>
+
+  <div class="content-section">
+    <h2>Temporal Binding Collapse</h2>
+    <p>The prefrontal cortex normally integrates past, present, and future into a coherent timeline — a "temporal workspace" that holds representations in distinct registers linked by causal structure. When PFC deactivates:</p>
+    <div class="callout danger">
+      <p><strong>Past trauma loses its "pastness" tag</strong> — memories become percepts indistinguishable from current sensory input.</p>
+      <p><strong>Future threats lose their "futurity" tag</strong> — projections become experienced as imminent, present-tense danger.</p>
+      <p><strong>Result: temporal compression.</strong> All threat-relevant information collapses into NOW.</p>
+    </div>
+    <p>This is why standard mindfulness ("return to the present moment") fails catastrophically. The problem <em>is</em> that everything has become the present moment. The instruction is meaningless when temporal binding has collapsed.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>The IQ Drop as Measurable Proxy</h2>
+    <p>Under acute PFC deactivation, measurable cognitive performance drops by 30-50 IQ-equivalent points. This is not "stress making you dumb" — it is circuit-level disconnection of the neural hardware that performs executive function, working memory, and rational planning.</p>
+    <p>The individual experiencing this is not weak, not panicking, not failing to cope. They are operating on subcortical circuits (amygdala, basal ganglia) that <em>cannot perform</em> the computations PFC normally handles. It's like running complex software on hardware that physically lacks the processor.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Childhood Onset and Structural Remodeling</h2>
+    <p>In individuals with childhood-onset stress exposure (McEwen's allostatic load model):</p>
+    <table class="data-table">
+      <thead><tr><th>Region</th><th>Structural Change</th><th>Functional Consequence</th></tr></thead>
+      <tbody>
+        <tr><td>Prefrontal Cortex</td><td>Dendritic pruning, reduced branching</td><td>Less buffer against excitotoxic events, faster deactivation threshold</td></tr>
+        <tr><td>Amygdala (BLA)</td><td>Dendritic hypertrophy, increased arbors</td><td>More sensitive threat detection, lower trigger threshold</td></tr>
+        <tr><td>Hippocampus</td><td>Volume reduction, impaired neurogenesis</td><td>Impaired context discrimination (threats generalize)</td></tr>
+      </tbody>
+    </table>
+    <p>The result: a brain that is <em>structurally optimized</em> for detecting threats and <em>structurally vulnerable</em> to glutamate-mediated shutdown. This is the developmental legacy — not a disorder to be cured, but a circuit configuration to be managed.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Sources</h2>
+    <ul style="list-style:none; font-size:0.85rem;">
+      <li style="margin-bottom:0.8rem;">Arnsten, A.F.T. (2009). Stress signalling pathways that impair prefrontal cortex structure and function. <em>Nat Rev Neurosci</em>, 10(6), 410-422. <a href="https://doi.org/10.1038/nrn2648" target="_blank">doi:10.1038/nrn2648</a></li>
+      <li style="margin-bottom:0.8rem;">Arnsten, A.F.T. (2015). Stress weakens prefrontal networks. <em>Nat Neurosci</em>, 18(10), 1376-1385. <a href="https://doi.org/10.1038/nn.4087" target="_blank">doi:10.1038/nn.4087</a></li>
+      <li style="margin-bottom:0.8rem;">Popoli, M. et al. (2012). The stressed synapse: the impact of stress and glucocorticoids on glutamate transmission. <em>Nat Rev Neurosci</em>, 13(1), 22-37. <a href="https://doi.org/10.1038/nrn3138" target="_blank">doi:10.1038/nrn3138</a></li>
+      <li style="margin-bottom:0.8rem;">Moghaddam, B. (1993). Stress preferentially increases extraneuronal levels of excitatory amino acids in the prefrontal cortex. <em>Cereb Cortex</em>, 3(5), 399-403.</li>
+      <li style="margin-bottom:0.8rem;">McEwen, B.S. (2007). Physiology and neurobiology of stress and adaptation. <em>Physiol Rev</em>, 87(3), 873-904. <a href="https://doi.org/10.1152/physrev.00041.2006" target="_blank">doi:10.1152/physrev.00041.2006</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:3rem; display:flex; justify-content:space-between; font-size:0.8rem;">
+    <a href="02-pathway.html">&larr; 02: Pathway</a>
+    <a href="04-gaba-homeostasis.html">04: GABA Homeostasis &rarr;</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://jthorvaldur.github.io">Thorarinson</a> &middot; <a href="https://github.com/jthorvaldur/gaba_glutamate">Source</a>
+</footer>
+
+<script>
+// Plot 1: Glutamate vs Time
+const plot1_normal = {x:[0,2,5,10,15,20,30,45,60], y:[5,12,18,22,20,15,8,6,5],
+  name:'Normal responder', mode:'lines+markers', line:{color:'#4488ff',width:2},
+  marker:{size:5}};
+const plot1_sensitized = {x:[0,2,5,10,15,20,30,45,60,90,120], y:[8,25,45,55,52,48,40,30,22,15,10],
+  name:'Sensitized (childhood-onset)', mode:'lines+markers', line:{color:'#ff3366',width:2},
+  marker:{size:5}};
+
+Plotly.newPlot('plot1', [plot1_normal, plot1_sensitized], {
+  xaxis: {title:'Time (minutes post-trigger)', color:'#888', gridcolor:'#222', zerolinecolor:'#333'},
+  yaxis: {title:'Extracellular glutamate (μM)', color:'#888', gridcolor:'#222', zerolinecolor:'#333'},
+  paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+  font:{family:'JetBrains Mono', color:'#aaa', size:11},
+  legend:{x:0.6, y:0.95, bgcolor:'rgba(0,0,0,0.5)'},
+  margin:{t:20,b:60,l:70,r:20},
+  shapes:[{type:'line',x0:0,x1:120,y0:35,y1:35,
+    line:{color:'#ffaa00',width:2,dash:'dash'}}],
+  annotations:[{x:80,y:37,text:'PFC deactivation threshold',showarrow:false,
+    font:{color:'#ffaa00',size:10}}]
+}, {responsive:true, displayModeBar:false});
+
+// Plot 2: NMDA Voltage Curve
+const vRange = Array.from({length:61}, (_, i) => -80 + i * 2);
+const mgBlock = vRange.map(v => 1 / (1 + 0.28 * Math.exp(-0.062 * v)));
+const excess = vRange.map(v => Math.min(1, 1 / (1 + 0.12 * Math.exp(-0.062 * v))));
+const memantine = vRange.map((v, i) => excess[i] * (v < -20 ? 0.3 : (v < 0 ? 0.3 + 0.7*(v+20)/20 : 1)) * 0.7);
+
+Plotly.newPlot('plot2', [
+  {x:vRange, y:mgBlock, name:'Normal (Mg²⁺ block)', line:{color:'#4488ff',width:2}},
+  {x:vRange, y:excess, name:'Under glutamate excess', line:{color:'#ff3366',width:2}},
+  {x:vRange, y:memantine, name:'With memantine', line:{color:'#00ff88',width:2,dash:'dot'}}
+], {
+  xaxis:{title:'Membrane potential (mV)', color:'#888', gridcolor:'#222', zerolinecolor:'#333'},
+  yaxis:{title:'Normalized NMDA conductance', color:'#888', gridcolor:'#222', zerolinecolor:'#333', range:[0,1.1]},
+  paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+  font:{family:'JetBrains Mono', color:'#aaa', size:11},
+  legend:{x:0.02, y:0.95, bgcolor:'rgba(0,0,0,0.5)'},
+  margin:{t:20,b:60,l:70,r:20},
+  annotations:[
+    {x:-70,y:0.15,text:'Mg²⁺ block at rest',showarrow:true,arrowcolor:'#4488ff',font:{color:'#4488ff',size:9},ax:40,ay:-30},
+    {x:-20,y:0.3,text:'Memantine clips peak',showarrow:true,arrowcolor:'#00ff88',font:{color:'#00ff88',size:9},ax:50,ay:30}
+  ]
+}, {responsive:true, displayModeBar:false});
+
+// Plot 3: Inverted-U (Arnsten Model)
+const xU = Array.from({length:100}, (_, i) => i / 100);
+const yU = xU.map(x => {
+  const peak = 0.45;
+  const sigma = 0.22;
+  return Math.exp(-Math.pow(x - peak, 2) / (2 * sigma * sigma));
+});
+
+Plotly.newPlot('plot3', [{x:xU, y:yU, mode:'lines', line:{color:'#e8e8f4',width:2.5}, showlegend:false}], {
+  xaxis:{title:'Catecholamine / cortisol level (normalized)', color:'#888', gridcolor:'#222', zerolinecolor:'#333', range:[0,1]},
+  yaxis:{title:'PFC functional capacity (normalized)', color:'#888', gridcolor:'#222', zerolinecolor:'#333', range:[0,1.1]},
+  paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+  font:{family:'JetBrains Mono', color:'#aaa', size:11},
+  margin:{t:20,b:60,l:70,r:20},
+  shapes:[
+    {type:'rect',x0:0.3,x1:0.55,y0:0,y1:1.05,fillcolor:'rgba(0,255,136,0.06)',line:{width:0}},
+    {type:'rect',x0:0.7,x1:0.9,y0:0,y1:1.05,fillcolor:'rgba(255,51,102,0.06)',line:{width:0}},
+    {type:'rect',x0:0.5,x1:0.7,y0:0,y1:1.05,fillcolor:'rgba(255,170,0,0.06)',line:{width:0}}
+  ],
+  annotations:[
+    {x:0.42,y:1.05,text:'Churchill zone',showarrow:false,font:{color:'#00ff88',size:9}},
+    {x:0.8,y:1.05,text:'Acute trigger',showarrow:false,font:{color:'#ff3366',size:9}},
+    {x:0.6,y:1.05,text:'Chronic stress',showarrow:false,font:{color:'#ffaa00',size:9}}
+  ]
+}, {responsive:true, displayModeBar:false});
+</script>
+
+</body>
+</html>

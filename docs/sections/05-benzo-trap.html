@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>05 — The Benzodiazepine Trap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-brand">Excitatory Brain</a>
+  <ul class="nav-links">
+    <li><a href="01-phenotype.html">Phenotype</a></li>
+    <li><a href="02-pathway.html">Pathway</a></li>
+    <li><a href="03-glutamate-storm.html">Storm</a></li>
+    <li><a href="04-gaba-homeostasis.html">GABA</a></li>
+    <li><a href="05-benzo-trap.html" class="active">Benzos</a></li>
+    <li><a href="06-churchill.html">Churchill</a></li>
+    <li><a href="07-solutions.html">Solutions</a></li>
+    <li><a href="08-triggers.html">Triggers</a></li>
+    <li><a href="09-references.html">References</a></li>
+  </ul>
+</nav>
+
+<div class="container page-content">
+
+  <div class="section-label">Section 05</div>
+  <h1>The Benzodiazepine Trap</h1>
+
+  <div class="content-section">
+    <h2>Same Site, Different Pharmacokinetics</h2>
+    <p>Benzodiazepines and ethanol both modulate GABA-A receptors — but they do so with radically different characteristics that determine their dependency profiles:</p>
+    <table class="data-table">
+      <thead><tr><th>Property</th><th>Ethanol</th><th>Clonazepam</th></tr></thead>
+      <tbody>
+        <tr><td>Binding site</td><td>δ-subunit extrasynaptic receptors</td><td>α/γ interface (benzodiazepine site)</td></tr>
+        <tr><td>Receptor occupancy at therapeutic dose</td><td>~5-15%</td><td>~50-80%</td></tr>
+        <tr><td>Subtype selectivity</td><td>Preferential for extrasynaptic (tonic inhibition)</td><td>Non-selective across α1,α2,α3,α5</td></tr>
+        <tr><td>Potency</td><td>Low (requires mM concentrations)</td><td>Extreme (nM concentrations)</td></tr>
+        <tr><td>Half-life</td><td>~1-2 hours (rapid clearance)</td><td>18-50 hours (accumulates)</td></tr>
+        <tr><td>Receptor adaptation rate</td><td>Slow (months-years)</td><td>Fast (weeks-months)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout danger">
+      <p><strong>The trap:</strong> Benzodiazepines provide the same subjective relief as ethanol but at 10-100x the receptor occupancy. This drives receptor downregulation orders of magnitude faster. The brain adapts to the high-occupancy state and <em>cannot function without it</em> within weeks to months.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Tolerance Mechanism: Subunit Composition Changes</h2>
+    <p>Under chronic benzodiazepine exposure, GABA-A receptors undergo compositional remodeling:</p>
+    <table class="data-table">
+      <thead><tr><th>Phase</th><th>Change</th><th>Consequence</th></tr></thead>
+      <tbody>
+        <tr><td>Weeks 1-4</td><td>α1 subunit internalization and downregulation</td><td>Sedative tolerance (need more for same effect)</td></tr>
+        <tr><td>Months 1-6</td><td>α4 and δ subunit upregulation (extrasynaptic shift)</td><td>Altered tonic inhibition, paradoxical anxiety</td></tr>
+        <tr><td>Months 6+</td><td>Global GABA-A receptor density reduction</td><td>Endogenous GABA no longer sufficient for baseline function</td></tr>
+        <tr><td>Concurrent</td><td>Compensatory glutamate receptor upregulation</td><td>Excitatory drive increases to oppose drug effect</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Plot 6: Receptor Density vs Exposure Duration -->
+  <div class="plot-container">
+    <div class="plot-title">Plot 6: GABA-A Receptor Density vs. Benzodiazepine Exposure Duration</div>
+    <div id="plot6" style="width:100%; height:400px;"></div>
+    <div class="plot-source">Source: Vinkers & Bhatt 2012, Lader 2011</div>
+  </div>
+
+  <div class="content-section">
+    <h2>The Withdrawal Cascade</h2>
+    <p>Upon cessation or rapid taper, the individual faces the worst of both worlds simultaneously:</p>
+    <div class="callout danger">
+      <p><strong>Decreased GABAergic function</strong> (fewer receptors, less sensitivity) combined with <strong>increased glutamatergic function</strong> (upregulated NMDA receptors, increased presynaptic release) = unopposed excitotoxicity.</p>
+    </div>
+    <p>Protracted withdrawal symptoms can persist months to years and include:</p>
+    <ul style="color:var(--text2); padding-left:1.5rem; margin:1rem 0; line-height:2;">
+      <li>Seizures (glutamate-mediated excitotoxicity)</li>
+      <li>Psychosis-like symptoms (perceptual distortions, derealization)</li>
+      <li>Depersonalization (PFC disconnection under chronic excitotoxic stress)</li>
+      <li>Tinnitus, visual disturbances (sensory cortex hyperexcitability)</li>
+      <li>Cognitive impairment lasting months post-cessation</li>
+    </ul>
+  </div>
+
+  <!-- Plot 7: Withdrawal Severity vs Taper Rate -->
+  <div class="plot-container">
+    <div class="plot-title">Plot 7: Withdrawal Severity vs. Taper Strategy</div>
+    <div id="plot7" style="width:100%; height:400px;"></div>
+    <div class="plot-source">Source: Fluyau et al. 2018, Ashton 2005</div>
+  </div>
+
+  <div class="content-section">
+    <h2>The Peterson Case</h2>
+    <p>Jordan Peterson's benzodiazepine crisis is the canonical modern example of this trap operating on the high-excitation phenotype:</p>
+    <table class="data-table">
+      <thead><tr><th>Phase</th><th>What Happened</th><th>Mechanism</th></tr></thead>
+      <tbody>
+        <tr><td>Initial prescription</td><td>Clonazepam prescribed for anxiety during wife's cancer diagnosis</td><td>Legitimate GABAergic need in high-excitation individual under extreme stress</td></tr>
+        <tr><td>Maintenance</td><td>Continued use (months to years)</td><td>GABA-A receptor downregulation proceeding silently</td></tr>
+        <tr><td>Attempted cessation</td><td>Standard taper attempted</td><td>Glutamate rebound + insufficient GABAergic capacity = catastrophic withdrawal</td></tr>
+        <tr><td>Medical emergency</td><td>Required medically-induced coma (Russia)</td><td>Uncontrolled excitotoxicity exceeding standard taper protocols</td></tr>
+        <tr><td>Recovery</td><td>Months of cognitive impairment, physical debility</td><td>Slow GABA-A receptor recovery + glutamatergic normalization</td></tr>
+      </tbody>
+    </table>
+    <div class="callout warning">
+      <p><strong>The lesson:</strong> The benzodiazepine was addressing a real GABAergic need. The problem was not the need — it was the choice of tool. High-occupancy receptor agonists create adaptation that the very condition they treat (excitatory predominance) makes catastrophically dangerous to reverse.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Sources</h2>
+    <ul style="list-style:none; font-size:0.85rem;">
+      <li style="margin-bottom:0.8rem;">Vinkers, C.H., & Bhatt, S. (2012). Hooked on benzodiazepines: GABA-A receptor subtypes and addiction. <em>Trends Pharmacol Sci</em>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4020178/" target="_blank">PMC4020178</a></li>
+      <li style="margin-bottom:0.8rem;">Fluyau, D. et al. (2018). Challenges of pharmacological management of benzodiazepine withdrawal. <em>Ther Adv Psychopharmacol</em>. <a href="https://doi.org/10.1177/2045125317753340" target="_blank">doi:10.1177/2045125317753340</a></li>
+      <li style="margin-bottom:0.8rem;">Lader, M. (2011). Benzodiazepines revisited — will we ever learn? <em>Addiction</em>, 106(12), 2086-2109.</li>
+      <li style="margin-bottom:0.8rem;">Ashton, H. (2005). The diagnosis and management of benzodiazepine dependence. <em>Curr Opin Psychiatry</em>, 18(3), 249-255.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top:3rem; display:flex; justify-content:space-between; font-size:0.8rem;">
+    <a href="04-gaba-homeostasis.html">&larr; 04: GABA Homeostasis</a>
+    <a href="06-churchill.html">06: Churchill &rarr;</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://jthorvaldur.github.io">Thorarinson</a> &middot; <a href="https://github.com/jthorvaldur/gaba_glutamate">Source</a>
+</footer>
+
+<script>
+// Plot 6: GABA-A Receptor Density vs Duration
+const months = Array.from({length:25}, (_, i) => i);
+const density = months.map(m => 100 * Math.exp(-0.06 * m) + (m > 8 ? -5 : 0));
+
+Plotly.newPlot('plot6', [{
+  x: months, y: density, mode:'lines', line:{color:'#ff3366', width:2.5}, showlegend:false
+}], {
+  xaxis:{title:'Duration of benzodiazepine exposure (months)', color:'#888', gridcolor:'#222', zerolinecolor:'#333'},
+  yaxis:{title:'GABA-A receptor density (% baseline)', color:'#888', gridcolor:'#222', zerolinecolor:'#333', range:[40,105]},
+  paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+  font:{family:'JetBrains Mono', color:'#aaa', size:11},
+  margin:{t:20,b:60,l:70,r:20},
+  shapes:[{type:'line',x0:8,x1:8,y0:40,y1:105,line:{color:'#ffaa00',width:2,dash:'dash'}}],
+  annotations:[{x:8,y:107,text:'"Point of no easy return"',showarrow:false,font:{color:'#ffaa00',size:10}}]
+}, {responsive:true, displayModeBar:false});
+
+// Plot 7: Withdrawal Severity
+const weeks = Array.from({length:60}, (_, i) => i);
+const coldTurkey = weeks.map(w => w < 1 ? w*90 : 90 * Math.exp(-0.05*w) + (w < 8 ? 20*Math.sin(w*0.8) : 0));
+const rapid = weeks.map(w => w < 4 ? w*15 : 60 * Math.exp(-0.08*(w-4)));
+const slow = weeks.map(w => w < 24 ? 10 + 15*Math.sin(w*0.15) : 25*Math.exp(-0.1*(w-24)));
+const micro = weeks.map(w => 5 + 8*Math.sin(w*0.1)*Math.exp(-0.02*w));
+
+Plotly.newPlot('plot7', [
+  {x:weeks, y:coldTurkey, name:'Cold turkey', line:{color:'#ff3366',width:2}},
+  {x:weeks, y:rapid, name:'Rapid taper (4wk)', line:{color:'#ffaa00',width:2}},
+  {x:weeks, y:slow, name:'Slow taper (6mo)', line:{color:'#4488ff',width:2}},
+  {x:weeks, y:micro, name:'Micro-taper (2yr+)', line:{color:'#00ff88',width:2}}
+], {
+  xaxis:{title:'Time (weeks)', color:'#888', gridcolor:'#222', zerolinecolor:'#333'},
+  yaxis:{title:'Symptom severity (normalized)', color:'#888', gridcolor:'#222', zerolinecolor:'#333', range:[0,100]},
+  paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+  font:{family:'JetBrains Mono', color:'#aaa', size:11},
+  legend:{x:0.6, y:0.95, bgcolor:'rgba(0,0,0,0.5)'},
+  margin:{t:20,b:60,l:70,r:20}
+}, {responsive:true, displayModeBar:false});
+</script>
+
+</body>
+</html>
